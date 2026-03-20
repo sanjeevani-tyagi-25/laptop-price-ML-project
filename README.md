@@ -2,7 +2,7 @@
 
 An intelligent Machine Learning web application that predicts laptop prices based on specifications like RAM, processor, storage, display, and more.
 
-🔗 **Live Demo:** https://laptop-price-predictor-761y.onrender.com
+🔗 **Live Demo:** https://laptop-price-ml-project-1.onrender.com
 
 ---
 
@@ -53,10 +53,6 @@ It is deployed as a web application using Flask and hosted on Render.
 
 ---
 
-## 🚀 How to Run Locally
+🌐 Live Demo
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/laptop-price-predictor.git
-cd laptop-price-predictor
+https://laptop-price-ml-project-1.onrender.com
