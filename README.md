@@ -17,7 +17,7 @@ A Machine Learning based web application that predicts the price of a laptop bas
 
 * Python
 * Flask
-* HTML, CSS
+* HTML
 * Scikit-learn
 * Pandas
 * NumPy
@@ -77,7 +77,7 @@ http://127.0.0.1:5000/
 
 ## 🌐 Live Demo
 
-(After deployment, paste your Render live link here)
+https://laptop-price-ml-project.onrender.com
 
 ---
 
