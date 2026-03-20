@@ -1,92 +1,62 @@
-# 💻 Laptop Price Predictor
+# 💻 AI Laptop Price Predictor
 
-A Machine Learning based web application that predicts the price of a laptop based on user inputs such as brand, RAM, processor, storage, screen size, and other specifications.
+An intelligent Machine Learning web application that predicts laptop prices based on specifications like RAM, processor, storage, display, and more.
 
----
-
-## 🚀 Features
-
-* Predicts laptop prices using a trained ML model
-* Simple and user-friendly interface
-* Fast and accurate predictions
-* Fully functional web application
+🔗 **Live Demo:** https://laptop-price-predictor-761y.onrender.com
 
 ---
 
-## 🛠️ Tech Stack
+## 📌 Project Overview
 
-* Python
-* Flask
-* HTML
-* Scikit-learn
-* Pandas
-* NumPy
+This project uses Machine Learning to estimate the price of a laptop based on user inputs.  
+It is deployed as a web application using Flask and hosted on Render.
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Features
 
-```
-Laptop-Price-Prediction/
-│── app.py
-│── laptop_model.pkl
-│── requirements.txt
-│── README.md
-│
-├── templates/
-│   └── index.html
-│
-├── static/
-```
+✔ Predict laptop prices instantly  
+✔ Clean and modern UI (Glassmorphism design)  
+✔ Dropdown-based input (user-friendly)  
+✔ Real-time ML prediction  
+✔ Fully deployed on cloud  
 
 ---
 
-## ▶️ How to Run Locally
+## 🧠 Tech Stack
+
+- Python
+- Flask
+- NumPy
+- Scikit-learn
+- HTML
+- Machine Learning Model (Regression)
+
+---
+
+## 📊 Input Features
+
+- Brand
+- Model Name
+- Processor
+- CPU Type
+- RAM
+- RAM Type
+- Storage (ROM)
+- Storage Type
+- GPU
+- Display Size
+- Resolution
+- Operating System
+- Warranty
+- Spec Rating
+
+---
+
+## 🚀 How to Run Locally
 
 1. Clone the repository:
 
-```
-git clone https://github.com/sanjeevani-tyagi-25/laptop-price-predictor.git
-```
-
-2. Navigate to the project folder:
-
-```
+```bash
+git clone https://github.com/your-username/laptop-price-predictor.git
 cd laptop-price-predictor
-```
-
-3. Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-4. Run the application:
-
-```
-python app.py
-```
-
-5. Open your browser and go to:
-
-```
-http://127.0.0.1:5000/
-```
-
----
-
-## 🌐 Live Demo
-
-https://laptop-price-ml-project.onrender.com
-
----
-
-## 👩‍💻 Author
-
-**Sanjeevani Tyagi**
-
----
-
-## 📌 Note
-
-This project is developed for academic and learning purposes.

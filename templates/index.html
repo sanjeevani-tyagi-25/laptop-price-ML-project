@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Laptop Price Predictor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(-45deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
+background-size:400% 400%;
+animation:gradientBG 10s ease infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+width:1050px;
+padding:40px;
+border-radius:25px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(25px);
+box-shadow:0 25px 60px rgba(0,0,0,0.4);
+color:white;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+font-size:34px;
+font-weight:700;
+letter-spacing:1px;
+text-shadow:0 0 20px rgba(255,255,255,0.8);
+}
+
+form{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+/* INPUT CARD STYLE */
+.input-box{
+background:rgba(255,255,255,0.25);
+padding:10px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.input-box:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+select{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:14px;
+background:white;
+}
+
+/* BUTTON */
+button{
+grid-column:span 3;
+padding:16px;
+background:linear-gradient(45deg,#ff416c,#ff4b2b);
+border:none;
+border-radius:15px;
+font-size:18px;
+color:white;
+cursor:pointer;
+font-weight:600;
+transition:0.4s;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* RESULT CARD */
+.result{
+margin-top:25px;
+padding:25px;
+text-align:center;
+background:rgba(255,255,255,0.3);
+border-radius:20px;
+animation:fadeIn 1s ease;
+}
+
+.result img{
+margin-bottom:10px;
+}
+
+.result h2{
+font-size:28px;
+margin:10px 0;
+}
+
+.result h3{
+font-size:20px;
+color:#fff;
+opacity:0.9;
+}
+
+@keyframes fadeIn{
+0%{opacity:0;transform:translateY(20px);}
+100%{opacity:1;transform:translateY(0);}
+}
+
+.footer{
+margin-top:20px;
+text-align:center;
+font-size:14px;
+opacity:0.9;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💻 AI Laptop Price Predictor</h1>
+
+<form action="/predict" method="post">
+
+<div class="input-box">
+<select name="brand">
+<option disabled selected>Choose Brand</option>
+<option value="0">Dell</option>
+<option value="1">HP</option>
+<option value="2">Lenovo</option>
+<option value="3">Asus</option>
+<option value="4">Acer</option>
+<option value="5">Apple</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="name">
+<option disabled selected>Model Name</option>
+<option value="0">Inspiron</option>
+<option value="1">Pavilion</option>
+<option value="2">ThinkPad</option>
+<option value="3">MacBook</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="spec_rating">
+<option disabled selected>Performance Level</option>
+<option value="60">Basic</option>
+<option value="75">Good</option>
+<option value="85">High</option>
+<option value="95">Premium</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="processor">
+<option disabled selected>Processor</option>
+<option value="0">Intel i3</option>
+<option value="1">Intel i5</option>
+<option value="2">Intel i7</option>
+<option value="3">Ryzen 5</option>
+<option value="4">Ryzen 7</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="CPU">
+<option disabled selected>CPU Type</option>
+<option value="0">i3</option>
+<option value="1">i5</option>
+<option value="2">i7</option>
+<option value="3">Ryzen</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="Ram">
+<option disabled selected>RAM</option>
+<option value="4">4 GB</option>
+<option value="8">8 GB</option>
+<option value="16">16 GB</option>
+<option value="32">32 GB</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="Ram_type">
+<option disabled selected>RAM Type</option>
+<option value="0">DDR3</option>
+<option value="1">DDR4</option>
+<option value="2">DDR5</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="ROM">
+<option disabled selected>Storage</option>
+<option value="256">256 GB</option>
+<option value="512">512 GB</option>
+<option value="1024">1 TB</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="ROM_type">
+<option disabled selected>Storage Type</option>
+<option value="0">HDD</option>
+<option value="1">SSD</option>
+<option value="2">Hybrid</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="GPU">
+<option disabled selected>Graphics</option>
+<option value="0">Integrated</option>
+<option value="1">NVIDIA</option>
+<option value="2">AMD</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="display_size">
+<option disabled selected>Display Size</option>
+<option value="13.3">13.3 inch</option>
+<option value="14">14 inch</option>
+<option value="15.6">15.6 inch</option>
+<option value="17">17 inch</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="resolution_width">
+<option disabled selected>Resolution Width</option>
+<option value="1366">1366 (HD)</option>
+<option value="1920">1920 (Full HD)</option>
+<option value="2560">2560 (2K)</option>
+<option value="3840">3840 (4K)</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="resolution_height">
+<option disabled selected>Resolution Height</option>
+<option value="768">768</option>
+<option value="1080">1080</option>
+<option value="1440">1440</option>
+<option value="2160">2160</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="OS">
+<option disabled selected>Operating System</option>
+<option value="0">Windows</option>
+<option value="1">MacOS</option>
+<option value="2">Linux</option>
+</select>
+</div>
+
+<div class="input-box">
+<select name="warranty">
+<option disabled selected>Warranty</option>
+<option value="1">1 Year</option>
+<option value="2">2 Years</option>
+<option value="3">3 Years</option>
+</select>
+</div>
+
+<button type="submit">🚀 Predict Laptop Price</button>
+
+</form>
+
+<div class="result">
+{% if prediction_text %}
+<img src="{{ url_for('static', filename=image) }}" width="90">
+<h2>{{ prediction_text }}</h2>
+<h3>{{ category }}</h3>
+{% endif %}
+</div>
+
+<div class="footer">
+⚡ AI Powered Laptop Price Prediction • Machine Learning Project
+</div>
+
+</div>
+
+</body>
+</html>
